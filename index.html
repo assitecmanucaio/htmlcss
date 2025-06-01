@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assistec - Soluções em Informática e Educação Tecnológica">
+    <title>Assistec - Educação Tecnológica</title>
+
+    <style>
+        :root {
+            --azul-primario: #4e8ecd;
+            --cinza-secundario: #4a4a4a;
+            --cor-texto: beige;
+            --transicao-rapida: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--azul-primario);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        header {
+
+            padding: 3% 0;
+            text-align: center;
+            height: 600px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo img {
+            width: 25%;
+        }
+
+        .line {
+            width: 50%;
+            max-width: 400px;
+            padding: 1rem 0;
+        }
+
+        .conteudo-principal {
+            background-color: var(--cinza-secundario);
+            padding: 3% 2%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 353px;
+        }
+
+        .nome-logo {
+            width: 10%;
+            margin-bottom: 2%;
+        }
+
+
+        .botao {
+            width: 15%;
+            transition: var(--transicao-rapida);
+        }
+
+        .botao:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .rodape {
+            background-color: #424242;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .rodape p {
+            margin: 5px 0;
+            line-height: 1.0;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Educação Tecnológica</h1>
+        <div class="logo">
+            <img src="Imagens/logosigla.png" alt="Logo Assistec" loading="lazy">
+            <h2>Soluções em Informática</h2>
+            <img class="line" src="Imagens/linha.png" alt="Divisor decorativo" loading="lazy">
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <img class="nome-logo" src="Imagens/nomelog.png" alt="Assistec" loading="lazy">
+        <a href="empresa.html" aria-label="Saiba mais sobre a Assistec">
+            <img class="botao" src="Imagens/botão.png" alt="Botão de ação" loading="lazy">
+        </a>
+    </main>
+    <div class="rodape">
+        <p>Fevereiro/2025 | Assistec Soluções em Informática.</p>
+        <p>Todos os direitos reservados. | Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 -
+            Centro.
+        </p>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /*animação*/
+        :root {
+            --azul-primario: #6ca9e6;
+            --cinza-secundario: #4a4a4a;
+            --branco: #ffffff;
+            --cor-texto: rgb(255, 255, 255);
+            --transicao-rapida: all 0.3s ease;
+            --font: Verdana;
+        }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #4a4a4a;
+        }
+
+        h1 {
+            font-family: var(--font);
+            font-size: 2.5rem;
+            color: var(--branco);
+            text-align: center;
+            padding: 25px 0;
+        }
+
+        /*IMAGEM cabeçalho pag*/
+        #Cabecalho {
+            text-align: center;
+            padding: 5px 0;
+            background: var(--branco);
+        }
+
+        .fotos {
+            width: 100%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+
+        .fotos img {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            width: 85%;
+            max-width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+
+        }
+
+        .cinza {
+            background-color: var(--cinza-secundario);
+        }
+
+
+        .buton {
+            display: inline-block;
+            align-items: center;
+            margin-left: 10%;
+            margin-right: -10%;
+            justify-content: center;
+        }
+
+        .buton img {
+            width: 500px;
+            transition: 0.3s ease;
+        }
+
+        .buton img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+    </style>
+
+    <div id="Cabecalho">
+        <img src="Imagens/AssistecBanLog.png" alt="">
+    </div>
+
+    <h1>Nossos momentos no Curso Técnico em Informática</h1>
+
+    <body>
+        <div class="fotos">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel1.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel2.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel3.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel4.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel5.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel6.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel7.jpeg" alt="">
+
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel8.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel9.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel10.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel11.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel12.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel13.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel14.jpeg" alt="">
+
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel15.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel16.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel17.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel18.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel19.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel20.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel21.jpeg" alt="">
+
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel22.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel23.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel24.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel25.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel26.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel27.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel28.jpeg" alt="">
+
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel29.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel30.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel31.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel32.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel33.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel34.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel35.jpeg" alt="">
+
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel36.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel37.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel38.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel39.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel40.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel41.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel42.jpeg" alt="">
+
+             <img src="Imagens/ServiçosIMG/img/IMGcarrocel43.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel44.jpeg" alt="">
+            <img src="Imagens/ServiçosIMG/img/IMGcarrocel45.jpeg" alt="">
+        </div>
+
+        <div class="cinza">
+            <div class="buton">
+                <a href="FeedBacks.html"></href> <img src="Imagens/voltarbranco.png" alt="Botão de ação"
+                        loading="lazy"></a>
+            </div>
+
+            <div class="buton">
+                <a href="Formulario.html"></href> <img src="Imagens/butonforms.png" alt="Botão de ação"
+                        loading="lazy"></a>
+            </div>
+            <div class="buton">
+                <a href="index.html">
+                    <img class="botao" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
+                </a>
+            </div>
+        </div>
+
+    </body>
+
+</html>

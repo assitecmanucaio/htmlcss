@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+
+<body>
+    <style>
+        /*animação*/
+        :root {
+            --azul-primario: #6ca9e6;
+            --cinza-secundario: #4a4a4a;
+            --branco: #ffffff;
+            --cor-texto: rgb(255, 255, 255);
+            --transicao-rapida: all 0.3s ease;
+            --font: Verdana;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            margin: 4rem 0 1rem 0;
+            font-family: var(--font);
+            font-size: 40px;
+            color: var(--branco);
+        }
+
+        .linha {
+            max-width: 600px;
+            padding: 1, 5rem 0;
+            margin: auto;
+        }
+
+
+        p {
+            max-width: 950px;
+            color: var(--cor-texto);
+            text-align: center;
+            font-family: var(--font);
+            font-size: 20px;
+            margin: auto;
+
+        }
+
+
+        body {
+            background-color: #4a4a4a;
+            font-family: var(--font);
+        }
+
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        .parclogo {
+            height: 250px;
+            text-align: center;
+            margin: auto;
+        }
+
+
+        .cinza {
+            background-color: var(--cinza-secundario);
+        }
+
+
+        /*botao quem somos*/
+        .quemso {
+            margin-left: 9%;
+            display: flex;
+            align-items: center;
+        }
+
+        .quemso img {
+            width: 500px;
+            transition: 0.3s ease;
+            margin: auto;
+            padding: 25px 0;
+        }
+
+        .quemso img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+
+
+        .buton {
+            display: inline-block;
+            align-items: center;
+            margin-left: 10%;
+            margin-right: -10%;
+            justify-content: center;
+        }
+
+        .buton img {
+            width: 500px;
+            transition: 0.3s ease;
+        }
+
+        .buton img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+
+        .rodape {
+            background-color: #424242;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .rodape p {
+            margin: 5px 0;
+            line-height: 1.0;
+        }
+    </style>
+
+    <h1>Nossos Parceiros</h1>
+
+
+    <div class="linha">
+        <a href="missão,visão,valor.html">
+            <img class="linha" src="Imagens/linhabranca.png" alt="Botão de ação" loading="lazy">
+        </a>
+
+        <div class="parclogo">
+            <img class="parclogo" src="Imagens/ParceriaZeni1.1.png">
+        </div>
+
+
+        <div class="quemso">
+            <a href="quem somos.html">
+                <img class="quemso" src="Imagens/Quemsomosbuton.png" alt="Botão de ação" loading="lazy">
+            </a>
+        </div>
+
+    </div>
+
+    <main>
+        <p>A parceria com a Zenith Digital representa um marco significativo na evolução dos nossos serviços. Juntas,
+            estamos unindo forças para expandir nossa presença e fornecer soluções mais eficientes, em sintonia com as
+            necessidades do mercado.</p>
+    </main>
+
+</body>
+
+<div class="cinza">
+    <div class="buton">
+        <a href="missão,visão,valor.html"></href> <img src="Imagens/voltarbranco.png" alt="Botão de ação"
+                loading="lazy"></a>
+    </div>
+    <div class="buton">
+        <a href="FeedBacks.html"></href> <img src="Imagens/Feedbuton.png" alt="Botão de ação" loading="lazy"></a>
+    </div>
+    <div class="buton">
+        <a href="index.html">
+            <img class="botao" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
+        </a>
+    </div>
+</div>
+
+
+</html>

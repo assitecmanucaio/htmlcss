@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /*animação*/
+        :root {
+            --azul-primario: #6ca9e6;
+            --cinza-secundario: #4a4a4a;
+            --branco: #ffffff;
+            --cor-texto: rgb(255, 255, 255);
+            --transicao-rapida: all 0.3s ease;
+            --font: Verdana;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: left;
+            margin: 3rem 0 1rem 0;
+            font-family: var(--font);
+            font-size: 30px;
+            color: black;
+        }
+
+        .cinza {
+            background-color: var(--cinza-secundario);
+        }
+
+        .buton {
+            display: inline-block;
+            align-items: center;
+            margin-left: 15%;
+            margin-right: -1%;
+            justify-content: center;
+
+        }
+
+        .buton img {
+            width: 500px;
+            transition: 0.3s ease;
+        }
+
+        .buton img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+
+        .Orbis {
+            width: 20%;
+            position: absolute;
+        }
+
+        input[type=text],
+        textarea {
+            width: 100%;
+            border: 2px solid gray;
+            border-radius: 5px;
+            margin: auto;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        label,
+        form p {
+            display: block;
+            margin-top: 1em;
+            margin-bottom: 0em;
+            font-weight: bold;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #2085c0;
+            color: white;
+            padding: 14px 20px;
+            margin: 2em 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        input[type=submit]:hover {
+            background-color: #0e679b;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        
+
+        <div class="organizacao">
+            <section id="contato">
+                <div style="font-size: 16px; width: 900px; margin: auto; padding: 50px 0px;">
+                    <h2>Fale conosco</h2>
+                    <p>Entre em contato preenchendo o formulário.</p>
+                    <form action="">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nomecompleto" placeholder="Seu nome completo...">
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Seu email...">
+
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="(DDD) 9 9999-9999...">
+
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+
+                        <input type="submit" value="Enviar">
+                    </form>
+                    <img class="Orbis" src="Imagens/Orbis Fala.png" alt="">
+                </div>
+            </section>
+
+        </div>
+
+        <div class="cinza">
+            <div class="buton">
+                <a href="FeedBacks.html"></href> <img src="Imagens/voltarbranco.png" alt="Botão de ação"
+                        loading="lazy"></a>
+            </div>
+
+            <div class="buton">
+                <a href="index.html">
+                    <img class="botao" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
+                </a>
+            </div>
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Imagem</title>
+    <style>
+        :root {
+            --azul-primario: #6ca9e6;
+            --cinza-secundario: #4a4a4a;
+            --branco: #ffffff;
+            --cor-texto: rgb(255, 255, 255);
+            --transicao-rapida: all 0.3s ease;
+            --font: Verdana;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            margin: 3rem 0 1rem 0;
+            font-family: var(--font);
+            font-size: 30px;
+            color: black;
+        }
+
+        .contato-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .imagem-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagem-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+
+        }
+
+
+
+        .formulario-container {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type=text],
+        textarea {
+            width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 12px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            background-color: white;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type=text]:focus,
+        textarea:focus {
+            border-color: var(--azul-primario);
+            outline: none;
+        }
+
+        label,
+        form p {
+            display: block;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #2085c0;
+            color: white;
+            padding: 14px 20px;
+            margin: 2em 0 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type=submit]:hover {
+            background-color: #0e679b;
+        }
+
+        .cinza {
+            background-color: var(--cinza-secundario);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .buton {
+            display: inline-block;
+            align-items: center;
+            margin-left: 15%;
+            margin-right: -1%;
+            justify-content: center;
+
+        }
+
+        .buton img {
+            width: 450px;
+            transition: 0.3s ease;
+        }
+
+        .buton img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+
+
+
+        .intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px 0 10px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .contato-container {
+                flex-direction: column;
+            }
+
+            .imagem-container {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            .intro {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro">
+            <h2>Fale Conosco</h2>
+            <p>Entre em contato conosco preenchendo o formulário. Nossa equipe está pronta para responder suas dúvidas e
+                ouvir suas sugestões.</p>
+        </div>
+
+        <div class="contato-container">
+            <div class="imagem-container">
+                <img src="Imagens/Orbis Fala.png" alt="Suporte ao cliente">
+            </div>
+
+            <div class="formulario-container">
+                <form action="">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nomecompleto" placeholder="Seu nome completo...">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Seu email...">
+
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" name="telefone" placeholder="(DDD) 9 9999-9999...">
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="6"
+                        placeholder="Digite sua mensagem..."></textarea>
+
+                    <input type="submit" value="Enviar Mensagem">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="cinza">
+        <div class="buton">
+            <a href="FeedBacks.html"></href> <img src="Imagens/voltarbranco.png" alt="Botão de ação" loading="lazy"></a>
+        </div>
+
+        <div class="buton">
+            <a href="index.html">
+                <img class="botao" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
+            </a>
+        </div>
+</body>
+
+</html>

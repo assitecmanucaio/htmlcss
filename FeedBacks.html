@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /*animação*/
+        :root {
+            --azul-primario: #6ca9e6;
+            --cinza-secundario: #4a4a4a;
+            --branco: #ffffff;
+            --cor-texto: rgb(255, 255, 255);
+            --transicao-rapida: all 0.3s ease;
+            --font: Verdana;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .linha {
+            max-width: 600px;
+            padding: 1rem 0;
+            margin: auto;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background-color: var(--branco);
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            margin: 5rem 0 1rem 0;
+            font-family: var(--font);
+            font-size: 40px;
+            color: var(--branco);
+        }
+
+        .card .user {
+            width: 100px;
+        }
+
+        .star {
+            width: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            max-width: 980px;
+            margin: 0 auto;
+            grid-gap: 40px;
+        }
+
+        .card {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 35px 40px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            border-radius: 20px;
+        }
+
+        .card .user {
+            width: 180px;
+            height: 100px;
+            border-radius: 50px;
+
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-top: 20px;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+
+
+
+        body {
+            background-color: #4a4a4a;
+        }
+
+
+
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .feed {
+            margin: 10px;
+            background-color: #4e8ecd;
+            color: rgb(8, 8, 8);
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+        }
+
+        .cinza {
+            background-color: var(--cinza-secundario);
+        }
+
+
+        .buton {
+            display: inline-block;
+            align-items: center;
+            margin-left: 10%;
+            margin-right: -10%;
+            justify-content: center;
+        }
+
+        .buton img {
+            width: 500px;
+            transition: 0.3s ease;
+        }
+
+        .buton img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+    </style>
+
+    <h1>O FeedBacks de nossos clientes</h1>
+
+    <div class="linha">
+        <a href="missão,visão,valor.html">
+            <img class="linha" src="Imagens/linhabranca.png" alt="Botão de ação" loading="lazy">
+        </a>
+    </div>
+
+    <section class="cards">
+
+        <div class="card">
+            <img class="user" src="Imagens/perfil1.png" alt="">
+            <h3>Sueli Rodrigues</h3>
+
+            <div class="stars">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+
+            </div>
+
+            <p>"Gosto muito do trabalho da Assistec. Sempre que precisei, fui bem atendida e tudo correu como esperado.
+                Dá pra ver que eles se preocupam com a qualidade e com o cliente.
+                Recomendo com tranquilidade!"</p>
+        </div>
+
+        <div class="card">
+            <img class="user" src="Imagens/perfil3.png" alt="">
+            <h3>Cassilda Santos</h3>
+
+            <div class="stars">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+
+            </div>
+
+            <p>"Gostei bastante do atendimento e da qualidade do serviço. A equipe foi muito educada e prestativa.
+                No entanto, acredito que o tempo de espera poderia ser um pouco menor, especialmente em horários de
+                pico.
+                Fora isso, tive uma ótima experiência e com certeza voltarei."</p>
+        </div>
+
+        <div class="card">
+            <img class="user" src="Imagens/perfil2.png" alt="">
+            <h3>Artur Michael Souza</h3>
+
+            <div class="stars">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+                <img class="star" src="Imagens/starfeed.png" alt="">
+
+            </div>
+
+            <p>"Queria dizer que gostei muito do atendimento de vocês!
+                Meu computador ficou novinho, do jeitinho que eu esperava.
+                É raro encontrar empresas que tratam a gente com tanto cuidado.
+                Com certeza vou voltar e também indicar pra amigos. Continuem assim!"</p>
+        </div>
+    </section>
+
+
+
+</body>
+<div class="cinza">
+    <div class="buton">
+        <a href="Parceria.html"></href> <img src="Imagens/voltarbranco.png" alt="Botão de ação" loading="lazy"></a>
+    </div>
+    <div class="buton">
+        <a href="Carrocel.html"></href> <img src="Imagens/carrocelbuton.png" alt="Botão de ação" loading="lazy"></a>
+    </div>
+    <div class="buton">
+        <a href="index.html">
+            <img class="botao" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
+        </a>
+    </div>
+</div>
+</body>
+
+</html>

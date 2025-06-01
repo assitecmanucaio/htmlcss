@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interatividade</title>
+  <style>
+    :root {
+      --azul-primario: #6ca9e6;
+      --cinza-secundario: #4a4a4a;
+      --branco: #ffffff;
+      --cor-texto: rgb(255, 255, 255);
+      --transicao-rapida: all 0.3s ease;
+      --font: Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--cinza-secundario);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .linha {
+      max-width: 600px;
+      padding: 1rem 0;
+      margin: 3px;
+    }
+
+    h1 {
+      font-family: var(--font);
+      font-size: 2.5rem;
+      color: var(--branco);
+      margin: 2rem 0;
+      padding: 5px 0;
+    }
+
+    .main {
+      width: 90%;
+      max-width: 1300px;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+
+    }
+
+    .cards {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      min-width: 250px;
+      text-align: center;
+
+    }
+
+
+    .cards img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 50%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      margin: 0 auto 1rem;
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: var(--branco);
+      margin: 0.5rem 0;
+      font-family: var(--font);
+    }
+
+    .funcao p {
+      font-size: 1rem;
+      color: var(--branco);
+      margin: 0.5rem 0;
+      line-height: 1.4;
+    }
+
+    .buton {
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    .botao {
+      width: 450px;
+      transition: var(--transicao-rapida);
+    }
+
+    .botao:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .main {
+        width: 95%;
+        gap: 1.5rem;
+      }
+
+      .cards {
+        width: 200px;
+      }
+
+      .cards img {
+        max-width: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+        margin: 1rem 0;
+      }
+
+      .cards {
+        width: 90%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Nossa Equipe</h1>
+
+  <img class="linha" src="Imagens/linhabranca.png" alt="Botão de ação" loading="lazy">
+
+
+  <div class="main">
+    <div class="cards">
+      <img src="Imagens/rafa.png" alt="Rafaele de Morais">
+      <h2>Rafaele de Morais</h2>
+      <div class="funcao">
+        <p>Consultora de Vendas & Marketing</p>
+      </div>
+    </div>
+
+    <div class="cards">
+      <img src="Imagens/clarissa.png" alt="Clarissa Lopes">
+      <h2>Clarissa Lopes</h2>
+      <div class="funcao">
+        <p>Analista Financeira</p>
+      </div>
+    </div>
+
+    <div class="cards">
+      <img src="Imagens/caio.png" alt="Caio Silva">
+      <h2>Caio Silva</h2>
+      <div class="funcao">
+        <p>Analista de Suporte Técnico</p>
+      </div>
+    </div>
+
+    <div class="cards">
+      <img src="Imagens/manu.png" alt="Emanuelly Moreira">
+      <h2>Emanuelly Moreira</h2>
+      <div class="funcao">
+        <p>Analista de Suporte Técnico</p>
+      </div>
+    </div>
+
+     <div class="cards">
+      <img src="Imagens/Orbis.png" alt="Emanuelly Moreira">
+      <h2>Orbis</h2>
+      <div class="funcao">
+        <p>Mascote</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="buton">
+    <a href="Parceria.html">
+      <img class="botao" src="Imagens/voltarbranco.png" alt="Voltar" loading="lazy">
+    </a>
+  </div>
+</body>
+
+</html>

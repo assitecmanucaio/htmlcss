@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Serviços em Cards</title>
+  <style>
+    /*animação*/
+    :root {
+      --azul-primario: #9fcfff;
+      --cinza-secundario: #4a4a4a;
+      --cor-texto: black;
+      --transicao-rapida: all 0.3s ease;
+      --font: Verdana;
+    }
+
+
+    .linha {
+      max-width: 700px;
+      padding: 1rem 0;
+      margin: auto;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .servico {
+      width: 114px;
+      height: 115px;
+      padding: 5px 0 0 0;
+    }
+
+    body {
+      font-family: var(--font);
+      background: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 30px;
+      padding: 40px 0;
+      letter-spacing: 2px;
+    }
+
+
+
+    .main,
+    .main2 {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .cards {
+      width: 300px;
+      background: #4e8ecd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -10px rgba(38, 57, 77, 0.5);
+    }
+
+
+    .branco {
+      background: #fff;
+      padding: 10px 10px 12px 25px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+    }
+
+
+    .brancoRC {
+      background: #fff;
+      text-align: center;
+      padding: 20px 20px 43px 25px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+
+    .cards h2 {
+      font-size: 16px;
+      margin: 10px 0;
+      color: #000;
+      font-family: var(--font);
+      line-height: 1.2;
+    }
+
+    .cards p {
+      font-size: 15px;
+      margin: 10px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    .cinza {
+      background-color: var(--cinza-secundario);
+    }
+
+    .buton {
+      display: inline-block;
+      align-items: center;
+      margin-left: -1%;
+      margin-right: -1%;
+      justify-content: center;
+    }
+
+    .buton img {
+      width: 500px;
+      transition: 0.3s ease;
+    }
+
+    .buton img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    .rodape {
+      background-color: #424242;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+
+    .rodape p {
+      margin: 5px 0;
+      line-height: 1.0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="linha">
+    <a href="missão,visão,valor.html">
+      <img class="linha" src="Imagens/linha.png" alt="Botão de ação" loading="lazy">
+    </a>
+  </div>
+
+  <h1>SERVIÇOS PRESTADOS</h1>
+
+  <div class="main">
+    <div class="cards">
+      <img class="servico" src="Imagens/ServiçosIMG/img/Manutenção.png" alt="">
+      <div class="branco">
+        <h2>MANUTENÇÃO EM COMPUTADORES</h2>
+        <p>Serviço especializado em manutenção de computadores, garantindo desempenho otimizado.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <img class="servico" src="Imagens/ServiçosIMG/img/RedeeCab.png" alt="">
+      <div class="brancoRC">
+        <h2>REDE E CABEAMENTO</h2>
+        <p>Infraestrutura sólida e cabeamento confiável para sua empresa.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <img class="servico" src="Imagens/ServiçosIMG/img/ManuPre.png" alt="">
+      <div class="brancoRC">
+        <h2>MANUTENÇÃO PREVENTIVA</h2>
+        <p>Suporte técnico contínuo para manter seus dispositivos sempre operando.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main2">
+    <div class="cards">
+      <img class="servico" src="Imagens/ServiçosIMG/img/BackUp.png" alt="">
+      <div class="branco">
+        <h2>BACKUP E RESTAURAÇÃO</h2>
+        <p>Soluções de backup para garantir que seus dados estejam sempre protegidos.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <img class="servico" src="Imagens/ServiçosIMG/img/Tercerização.png" alt="">
+      <div class="branco">
+        <h2>TERCEIRIZAÇÃO DE TI</h2>
+        <p>Gestão completa de TI para você focar no core do seu negócio.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <img class="servico" src="Imagens/ServiçosIMG/img/Servidor.png" alt="">
+      <div class="branco">
+        <h2>SERVIDORES DEDICADOS</h2>
+        <p>Performance e confiabilidade máxima para seus aplicativos e dados.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cinza">
+    <div class="buton">
+      <a href="missão,visão,valor.html"></href> <img src="Imagens/voltarpreto.png" alt="Botão de ação"
+          loading="lazy"></a>
+    </div>
+    <div class="buton">
+      <a href="Parceria.html"></href> <img src="Imagens/parceriabuton.png" alt="Botão de ação" loading="lazy"></a>
+    </div>
+
+    <div class="buton">
+      <a href="index.html">
+        <img class="botao" src="Imagens/casabuton.png" alt="Botão de ação" loading="lazy">
+      </a>
+    </div>
+  </div>
+
+  <div class="rodape">
+    <p>Fevereiro/2025 | Assistec Soluções em Informática.</p>
+    <p>Todos os direitos reservados. | Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro.
+    </p>
+  </div>
+</body>
+
+</html>

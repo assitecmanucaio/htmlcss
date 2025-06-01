@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assistec - Consultoria em Manutenção Tecnológica">
+    <title>Assistec - Transformando Tecnologia</title>
+
+    <style>
+        /*animação*/
+        :root {
+            --azul-primario: #4e8ecd;
+            --cinza-secundario: #4a4a4a;
+            --branco: #ffffff;
+            --cor-texto: black;
+            --cor-font: rgb(255, 255, 255);
+            --transicao-rapida: all 0.3s ease;
+            --font: Verdana;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--azul-primario);
+            font-family: var(--font);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 1% 0;
+            text-align: center;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            color: var(--branco);
+        }
+
+        .logo-img {
+            width: 25%;
+            max-width: 200px;
+        }
+
+        .divisor {
+            width: 50%;
+            max-width: 400px;
+        }
+
+        .conteudo-principal {
+            background-color: var(--branco);
+            padding: 2% 7%;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .sobre {
+            max-width: 950px;
+            margin: 0 auto 3%;
+            /*cor do texto*/
+            color: var(--cor-texto);
+
+        }
+
+        .botao-saiba-mais {
+            width: 200px;
+            padding: 15px 30px;
+            background-color: var(--azul-primario);
+            color: var(--branco);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: larger;
+            transition: var(--transicao-rapida);
+        }
+
+        .botao-saiba-mais:hover {
+            transform: scale(1.05);
+            background-color: #3a6da5;
+        }
+
+        .buton {
+            padding: 2% 2%;
+            display: flex;
+            align-items: center;
+        }
+
+        .botao {
+
+            width: 33%;
+            transition: var(--transicao-rapida);
+        }
+
+        .botao:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .rodape {
+            background-color: #424242;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .rodape p {
+            margin: 5px 0;
+            line-height: 1.0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img class="logo-img" src="Imagens/logosigla.png" alt="Logo Assistec" loading="lazy">
+            <h1>Assistência que conecta você às melhores tecnologias.</h1>
+            <img class="divisor" src="Imagens/linha.png" alt="Divisor decorativo" loading="lazy">
+            <h2>Soluções em Informática</h2>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="sobre">
+            <h2>Sobre Nós</h2>
+            <br>
+            <p>A Assistec foi estabelecida em 4 de fevereiro de 2025, quando quatro pessoas de
+                um curso técnico em informática se uniram motivadas pela necessidade da criação de uma empresa de
+                consultoria
+                de manutenção de tecnologia, especializada em suporte técnico e software. Possuindo como meta,
+                ampliar a otimização de seus serviços e a eficiência na qualidade de seus produtos de maneira inovadora
+                por meio de profissionais especializados.</p>
+        </section>
+
+        <button class="botao-saiba-mais" onclick="location.href='missão,visão,valor.html'" type="button">
+            Saiba Mais
+        </button>
+        <div class="buton">
+            <a href="index.html">
+                <img class="botao" src="Imagens/casabrancaMaIOR.png" alt="Botão de ação" loading="lazy">
+            </a>
+        </div>
+    </main>
+
+    <div class="rodape">
+        <p>Fevereiro/2025 | Assistec Soluções em Informática.</p>
+        <p>Todos os direitos reservados. | Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 -
+            Centro.
+        </p>
+</body>
+
+</html>
