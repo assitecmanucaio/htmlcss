@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/*IMAGEM cabeçalho pag*/
+#Cabecalho {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #c3efff;
+}
+#Cabecalhobuton {
+    text-align: center;
+}
+
+
+
+
+nav {
+    background: #3572b0; /*nosso serviços e etc cor de fundo*/
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#bemVindo,
+#comoSurgiu {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #3572b0;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+/*back Missão,Visão,Valor*/
+#MVV {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: #e8e8e8;
+    border-radius: 10px;
+}
+
+#mvvbotom {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #245d8c; /*back botão*/
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#mvvbotom:hover {
+    background: #245d8c;
+}
+
+footer {
+    background: #333;
+    padding: 2px 1px;
+    color: #fff; /*rodapé cor*/
+    margin-top: 20px;
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+footer .footer-logo,
+footer .footer-info,
+footer .footer-payment {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+/*as logobranca*/
+footer .footer-logo img {
+    width: 100px; 
+    vertical-align: bottom;
+
+}
+
+footer .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+footer .footer-info div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+footer .footer-info img,
+footer .footer-payment img {
+    width: 25px; 
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    footer .footer-container {
+        flex-direction: column;
+    }
+}
