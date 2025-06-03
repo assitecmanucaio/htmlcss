@@ -2,13 +2,13 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Assistec - Consultoria em Manutenção Tecnológica">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Assistec - Consultoria em Manutenção Tecnológica" />
     <title>Assistec - Transformando Tecnologia</title>
 
     <style>
-        /*animação*/
+        /* Variáveis de cor e fonte */
         :root {
             --azul-primario: #4e8ecd;
             --cinza-secundario: #4a4a4a;
@@ -16,9 +16,10 @@
             --cor-texto: black;
             --cor-font: rgb(255, 255, 255);
             --transicao-rapida: all 0.3s ease;
-            --font: Verdana;
+            --font: Verdana, Geneva, Tahoma, sans-serif;
         }
 
+        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
@@ -29,8 +30,12 @@
             background-color: var(--azul-primario);
             font-family: var(--font);
             line-height: 1.6;
+            color: var(--cor-texto);
         }
 
+        /* ======================
+           HEADER (RESPONSIVO)
+           ====================== */
         header {
             padding: 1% 0;
             text-align: center;
@@ -61,6 +66,20 @@
             max-width: 400px;
         }
 
+        .logo-container h1 {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .logo-container h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+
+        /* ======================
+           MAIN / CONTEÚDO PRINCIPAL
+           (sem alterações)
+           ====================== */
         .conteudo-principal {
             background-color: var(--branco);
             padding: 2% 7%;
@@ -71,9 +90,7 @@
         .sobre {
             max-width: 950px;
             margin: 0 auto 3%;
-            /*cor do texto*/
             color: var(--cor-texto);
-
         }
 
         .botao-saiba-mais {
@@ -97,11 +114,12 @@
             padding: 2% 2%;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
         .botao {
-
             width: 33%;
+            max-width: 150px;
             transition: var(--transicao-rapida);
         }
 
@@ -110,59 +128,148 @@
             filter: brightness(1.1);
         }
 
+        /* ======================
+           RODAPÉ (FOOTER)
+           (sem alterações)
+           ====================== */
         .rodape {
             background-color: #424242;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            font-size: 0.9rem;
+            padding: 20px 0;
+            font-family: var(--font);
+        }
+
+        .conteudo-rodape {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .rodape p {
             margin: 5px 0;
-            line-height: 1.0;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        /* ======================
+           MEDIA QUERIES (Cabeçalho Responsivo)
+           ====================== */
+
+        /* Até 768px de largura */
+        @media (max-width: 768px) {
+            header {
+                height: auto; /* altura automática */
+                padding: 2% 0;
+            }
+
+            .logo-img {
+                width: 40%;
+                max-width: 180px;
+            }
+
+            .divisor {
+                width: 70%;
+                max-width: 300px;
+            }
+
+            .logo-container h1 {
+                font-size: 1.5rem;
+            }
+
+            .logo-container h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Até 480px de largura */
+        @media (max-width: 480px) {
+            .logo-img {
+                width: 60%;
+                max-width: 150px;
+            }
+
+            .divisor {
+                width: 80%;
+                max-width: 240px;
+            }
+
+            .logo-container h1 {
+                font-size: 1.2rem;
+            }
+
+            .logo-container h2 {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
-
+    <!-- ======================
+         HEADER
+         ====================== -->
     <header>
         <div class="logo-container">
-            <img class="logo-img" src="Imagens/logosigla.png" alt="Logo Assistec" loading="lazy">
+            <img class="logo-img" src="Imagens/logosigla.png" alt="Logo Assistec" loading="lazy" />
             <h1>Assistência que conecta você às melhores tecnologias.</h1>
-            <img class="divisor" src="Imagens/linha.png" alt="Divisor decorativo" loading="lazy">
+            <img class="divisor" src="Imagens/linha.png" alt="Divisor decorativo" loading="lazy" />
             <h2>Soluções em Informática</h2>
         </div>
     </header>
 
+    <!-- ======================
+         CONTEÚDO PRINCIPAL
+         (sem alterações)
+         ====================== -->
     <main class="conteudo-principal">
         <section class="sobre">
             <h2>Sobre Nós</h2>
-            <br>
-            <p>A Assistec foi estabelecida em 4 de fevereiro de 2025, quando quatro pessoas de
-                um curso técnico em informática se uniram motivadas pela necessidade da criação de uma empresa de
-                consultoria
-                de manutenção de tecnologia, especializada em suporte técnico e software. Possuindo como meta,
-                ampliar a otimização de seus serviços e a eficiência na qualidade de seus produtos de maneira inovadora
-                por meio de profissionais especializados.</p>
+            <br />
+            <p>
+                A Assistec foi estabelecida em 4 de fevereiro de 2025, quando quatro pessoas de um curso técnico em
+                informática se uniram motivadas pela necessidade da criação de uma empresa de consultoria de manutenção
+                de tecnologia, especializada em suporte técnico e software. Possuindo como meta, ampliar a otimização de
+                seus serviços e a eficiência na qualidade de seus produtos de maneira inovadora por meio de
+                profissionais especializados.
+            </p>
         </section>
 
-        <button class="botao-saiba-mais" onclick="location.href='missão,visão,valor.html'" type="button">
+        <button
+            class="botao-saiba-mais"
+            onclick="location.href='missão,visão,valor.html'"
+            type="button"
+        >
             Saiba Mais
         </button>
+
         <div class="buton">
             <a href="index.html">
-                <img class="botao" src="Imagens/casabrancaMaIOR.png" alt="Botão de ação" loading="lazy">
+                <img
+                    class="botao"
+                    src="Imagens/casabrancaMaIOR.png"
+                    alt="Botão de ação"
+                    loading="lazy"
+                />
             </a>
         </div>
     </main>
 
-    <div class="rodape">
-        <p>Fevereiro/2025 | Assistec Soluções em Informática.</p>
-        <p>Todos os direitos reservados. | Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 -
-            Centro.
-        </p>
+    <!-- ======================
+         RODAPÉ
+         (sem alterações)
+         ====================== -->
+    <footer class="rodape">
+        <div class="conteudo-rodape">
+            <p>Fevereiro/2025 | Todos os direitos reservados a Assistec Soluções em Informática.</p>
+            <p class="info-contato">
+                Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro
+            </p>
+            <p class="info-contato">
+                Telefone: (31) 99999-9999 | Email: contato@assistec.com.br
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>

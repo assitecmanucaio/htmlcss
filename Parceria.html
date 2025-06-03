@@ -4,91 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-</head>
-
-<body>
+    <title>Nossos Parceiros</title>
     <style>
-        /*animação*/
+        /* Variáveis padronizadas */
         :root {
             --azul-primario: #6ca9e6;
             --cinza-secundario: #4a4a4a;
             --branco: #ffffff;
             --cor-texto: rgb(255, 255, 255);
             --transicao-rapida: all 0.3s ease;
-            --font: Verdana;
+            --font-principal: Verdana, Geneva, Tahoma, sans-serif;
+            --font-secundaria: Arial, sans-serif;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: var(--font-principal);
+            /* Font principal aplicada globalmente */
         }
 
         h1 {
             display: flex;
             justify-content: center;
             margin: 4rem 0 1rem 0;
-            font-family: var(--font);
             font-size: 40px;
             color: var(--branco);
         }
 
         .linha {
             max-width: 600px;
-            padding: 1, 5rem 0;
+            padding: 1.0rem 0;
             margin: auto;
         }
 
-
-        p {
+        .Par {
             max-width: 950px;
             color: var(--cor-texto);
             text-align: center;
-            font-family: var(--font);
             font-size: 20px;
             margin: auto;
-
+            padding: 0 10px 10px;
         }
-
 
         body {
-            background-color: #4a4a4a;
-            font-family: var(--font);
+            background-color: var(--cinza-secundario);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+            /* Adicionado para consistência */
         }
 
+        .conteudo {
+            flex: 1;
+        }
 
         nav a:hover {
             text-decoration: underline;
         }
 
-
-
         .parclogo {
             height: 250px;
             text-align: center;
             margin: auto;
+            padding: 20px 0;
         }
 
+        .parclogo img {
+            max-height: 100%;
+            max-width: 100%;
+        }
 
         .cinza {
             background-color: var(--cinza-secundario);
+            padding: 20px 0;
         }
 
-
-        /*botao quem somos*/
+        /* Botão Quem Somos */
         .quemso {
-            margin-left: 9%;
             display: flex;
-            align-items: center;
+            justify-content: center;
+            padding: 20px 0 40px;
         }
 
         .quemso img {
             width: 500px;
-            transition: 0.3s ease;
+            max-width: 100%;
+            transition: var(--transicao-rapida);
             margin: auto;
-            padding: 25px 0;
         }
 
         .quemso img:hover {
@@ -96,19 +101,23 @@
             filter: brightness(1.1);
         }
 
-
+        .buton-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px 0;
+        }
 
         .buton {
             display: inline-block;
-            align-items: center;
-            margin-left: 10%;
-            margin-right: -10%;
-            justify-content: center;
+            transition: var(--transicao-rapida);
         }
 
         .buton img {
-            width: 300px;
-            transition: 0.3s ease;
+            width: 500px;
+            max-width: 100%;
+            transition: var(--transicao-rapida);
         }
 
         .buton img:hover {
@@ -116,64 +125,82 @@
             filter: brightness(1.1);
         }
 
+    .rodape {
+      background-color: #424242;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 
-        .rodape {
-            background-color: #424242;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 0.9rem;
-        }
+    .conteudo-rodape {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .rodape p {
-            margin: 5px 0;
-            line-height: 1.0;
-        }
+    .rodape p {
+      margin: 5px 0;
+      line-height: 1.6;
+    }
     </style>
+</head>
 
-    <h1>Nossos Parceiros</h1>
+<body>
+    <div class="conteudo">
+        <h1>Nossos Parceiros</h1>
 
-
-    <div class="linha">
-        <a href="missão,visão,valor.html">
-            <img class="linha" src="Imagens/linhabranca.png" alt="Botão de ação" loading="lazy">
-        </a>
-
-        <div class="parclogo">
-            <img class="parclogo" src="Imagens/ParceriaZeni1.1.png">
-        </div>
-
-
-        <div class="quemso">
-            <a href="quem somos.html">
-                <img class="quemso" src="Imagens/Quemsomosbuton.png" alt="Botão de ação" loading="lazy">
+        <div class="linha">
+            <a href="missão,visão,valor.html">
+                <img class="linha" src="Imagens/linhabranca.png" alt="Linha decorativa" loading="lazy">
             </a>
         </div>
 
+        <div class="parclogo">
+            <img src="Imagens/ParceriaZeni1.1.png" alt="Parceria Zenith Digital">
+        </div>
+
+        <div class="quemso">
+            <a href="quem somos.html">
+                <img src="Imagens/Quemsomosbuton.png" alt="Botão Quem Somos" loading="lazy">
+            </a>
+        </div>
+
+        <main class="Par">
+            <p>A parceria com a Zenith Digital representa um marco significativo na evolução dos nossos serviços.
+                Juntas, estamos unindo forças para expandir nossa presença e fornecer soluções mais eficientes, em
+                sintonia com
+                as necessidades do mercado.</p>
+        </main>
     </div>
 
-    <main>
-        <p>A parceria com a Zenith Digital representa um marco significativo na evolução dos nossos serviços. Juntas,
-            estamos unindo forças para expandir nossa presença e fornecer soluções mais eficientes, em sintonia com as
-            necessidades do mercado.</p>
-    </main>
+    <div class="cinza">
+        <div class="buton-container">
+            <div class="buton">
+                <a href="serviços.html">
+                    <img src="Imagens/voltarbranco.png" alt="Botão Voltar" loading="lazy">
+                </a>
+            </div>
+            <div class="buton">
+                <a href="FeedBacks.html">
+                    <img src="Imagens/Feedbuton.png" alt="Botão Feedbacks" loading="lazy">
+                </a>
+            </div>
+            <div class="buton">
+                <a href="index.html">
+                    <img src="Imagens/casabranca.png" alt="Botão Página Inicial" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </div>
 
+    <footer class="rodape">
+        <div class="conteudo-rodape">
+            <p>Fevereiro/2025 | Todos os direitos reservados a Assistec Soluções em Informática.</p>
+            <p class="info-contato">Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro</p>
+            <p class="info-contato">Telefone: (31) 99999-9999 | Email: contato@assistec.com.br</p>
+        </div>
+    </footer>
 </body>
-
-<div class="cinza">
-    <div class="buton">
-        <a href="missão,visão,valor.html"></href> <img src="Imagens/voltarbranco.png" alt="Botão de ação"
-                loading="lazy"></a>
-    </div>
-    <div class="buton">
-        <a href="FeedBacks.html"></href> <img src="Imagens/Feedbuton.png" alt="Botão de ação" loading="lazy"></a>
-    </div>
-    <div class="buton">
-        <a href="index.html">
-            <img class="botao" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
-        </a>
-    </div>
-</div>
-
 
 </html>

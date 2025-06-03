@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
+    <title>Feedbacks de Clientes</title>
     <style>
         /*animação*/
         :root {
@@ -25,19 +22,23 @@
             box-sizing: border-box;
         }
 
+        html,
+        body {
+            height: 100%;
+            background-color: #4a4a4a;
+            font-family: var(--font);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .conteudo {
+            flex: 1;
+        }
+
         .linha {
             max-width: 600px;
             padding: 1rem 0;
             margin: auto;
-        }
-
-        html,
-        body {
-            height: 100%;
-        }
-
-        body {
-            background-color: var(--branco);
         }
 
         h1 {
@@ -60,10 +61,10 @@
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-
             max-width: 980px;
             margin: 0 auto;
             grid-gap: 40px;
+            padding: 0 20px 40px;
         }
 
         .card {
@@ -80,7 +81,6 @@
             width: 180px;
             height: 100px;
             border-radius: 50px;
-
             margin-bottom: 15px;
         }
 
@@ -89,52 +89,34 @@
             margin-bottom: 15px;
         }
 
-        p {
+        .card p {
             margin-top: 20px;
             text-align: center;
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 18px;
-        }
-
-
-
-        body {
-            background-color: #4a4a4a;
-        }
-
-
-
-        .main {
-            display: flex;
-            justify-content: center;
-        }
-
-        .feed {
-            margin: 10px;
-            background-color: #4e8ecd;
-            color: rgb(8, 8, 8);
-            width: 300px;
-            height: 200px;
-            border-radius: 10px;
-            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-
+            color: #333;
         }
 
         .cinza {
             background-color: var(--cinza-secundario);
+            padding: 20px 0;
         }
 
+        .buton-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
 
         .buton {
             display: inline-block;
-            align-items: center;
-            margin-left: 10%;
-            margin-right: -10%;
-            justify-content: center;
+            transition: all 0.3s ease;
         }
 
         .buton img {
-            width: 300px;
+            width: 500px;
+            max-width: 100%;
             transition: 0.3s ease;
         }
 
@@ -142,90 +124,155 @@
             transform: scale(1.05);
             filter: brightness(1.1);
         }
+
+
+
+        /* Responsividade */
+        @media (max-width: 1000px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .buton-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .buton img {
+                width: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 32px;
+                margin: 3rem 0 1rem;
+            }
+
+            .card {
+                padding: 25px 20px;
+            }
+
+            .buton img {
+                width: 300px;
+            }
+        }
+
+
+        /* RODAPÉ CORRIGIDO */
+    .rodape {
+      background-color: #424242;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      width: 100%;
+    }
+
+    .conteudo-rodape {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .rodape p {
+      margin: 5px 0;
+      line-height: 1.6;
+    }
     </style>
+</head>
 
-    <h1>O FeedBacks de nossos clientes</h1>
+<body>
+    <div class="conteudo">
+        <h1>O FeedBacks de nossos clientes</h1>
 
-    <div class="linha">
-        <a href="missão,visão,valor.html">
-            <img class="linha" src="Imagens/linhabranca.png" alt="Botão de ação" loading="lazy">
-        </a>
-    </div>
-
-    <section class="cards">
-
-        <div class="card">
-            <img class="user" src="Imagens/perfil1.png" alt="">
-            <h3>Sueli Rodrigues</h3>
-
-            <div class="stars">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-
-            </div>
-
-            <p>"Gosto muito do trabalho da Assistec. Sempre que precisei, fui bem atendida e tudo correu como esperado.
-                Dá pra ver que eles se preocupam com a qualidade e com o cliente.
-                Recomendo com tranquilidade!"</p>
+        <div class="linha">
+            <a href="missão,visão,valor.html">
+                <img class="linha" src="Imagens/linhabranca.png" alt="Botão de ação" loading="lazy">
+            </a>
         </div>
 
-        <div class="card">
-            <img class="user" src="Imagens/perfil3.png" alt="">
-            <h3>Cassilda Santos</h3>
-
-            <div class="stars">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-
+        <section class="cards">
+            <div class="card">
+                <img class="user" src="Imagens/perfil1.png" alt="Sueli Rodrigues">
+                <h3>Sueli Rodrigues</h3>
+                <div class="stars">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                </div>
+                <p>"Gosto muito do trabalho da Assistec. Sempre que precisei, fui bem atendida e tudo correu como
+                    esperado. Dá pra ver que eles se preocupam com a qualidade e com o cliente. Recomendo com
+                    tranquilidade!"</p>
             </div>
 
-            <p>"Gostei bastante do atendimento e da qualidade do serviço. A equipe foi muito educada e prestativa.
-                No entanto, acredito que o tempo de espera poderia ser um pouco menor, especialmente em horários de
-                pico.
-                Fora isso, tive uma ótima experiência e com certeza voltarei."</p>
-        </div>
-
-        <div class="card">
-            <img class="user" src="Imagens/perfil2.png" alt="">
-            <h3>Artur Michael Souza</h3>
-
-            <div class="stars">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-                <img class="star" src="Imagens/starfeed.png" alt="">
-
+            <div class="card">
+                <img class="user" src="Imagens/perfil3.png" alt="Cassilda Santos">
+                <h3>Cassilda Santos</h3>
+                <div class="stars">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                </div>
+                <p>"Gostei bastante do atendimento e da qualidade do serviço. A equipe foi muito educada e prestativa.
+                    No entanto, acredito que o tempo de espera poderia ser um pouco menor, especialmente em horários de
+                    pico. Fora isso, tive uma ótima experiência e com certeza voltarei."</p>
             </div>
 
-            <p>"Queria dizer que gostei muito do atendimento de vocês!
-                Meu computador ficou novinho, do jeitinho que eu esperava.
-                É raro encontrar empresas que tratam a gente com tanto cuidado.
-                Com certeza vou voltar e também indicar pra amigos. Continuem assim!"</p>
+            <div class="card">
+                <img class="user" src="Imagens/perfil2.png" alt="Artur Michael Souza">
+                <h3>Artur Michael Souza</h3>
+                <div class="stars">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                    <img class="star" src="Imagens/starfeed.png" alt="Estrela">
+                </div>
+                <p>"Queria dizer que gostei muito do atendimento de vocês! Meu computador ficou novinho, do jeitinho que
+                    eu esperava. É raro encontrar empresas que tratam a gente com tanto cuidado. Com certeza vou voltar
+                    e também indicar pra amigos. Continuem assim!"</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="cinza">
+        <div class="buton-container">
+            <div class="buton">
+                <a href="Parceria.html">
+                    <img src="Imagens/voltarbranco.png" alt="Botão Voltar" loading="lazy">
+                </a>
+            </div>
+            <div class="buton">
+                <a href="Carrocel.html">
+                    <img src="Imagens/carrocelbuton.png" alt="Botão Carrossel" loading="lazy">
+                </a>
+            </div>
+            <div class="buton">
+                <a href="index.html">
+                    <img src="Imagens/casabranca.png" alt="Botão Página Inicial" loading="lazy">
+                </a>
+            </div>
         </div>
-    </section>
-
-
-
-</body>
-<div class="cinza">
-    <div class="buton">
-        <a href="Parceria.html"></href> <img src="Imagens/voltarbranco.png" alt="Botão de ação" loading="lazy"></a>
     </div>
-    <div class="buton">
-        <a href="Carrocel.html"></href> <img src="Imagens/carrocelbuton.png" alt="Botão de ação" loading="lazy"></a>
+
+  <footer class="rodape">
+    <div class="conteudo-rodape">
+      <p>Fevereiro/2025 | Todos os direitos reservados a Assistec Soluções em Informática.</p>
+      <p class="info-contato">Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro</p>
+      <p class="info-contato">Telefone: (31) 99999-9999 | Email: contato@assistec.com.br</p>
     </div>
-    <div class="buton">
-        <a href="index.html">
-            <img class="botao" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
-        </a>
-    </div>
-</div>
+  </footer>
+
 </body>
 
 </html>

@@ -30,14 +30,11 @@
 
         header {
 
-            min-width: 320px;
-            max-width: 1000px;
-            margin: auto;
+            padding: 3% 0;
             text-align: center;
-          
+            height: 600px;
         }
 
-          
         .logo {
             display: flex;
             flex-direction: column;
@@ -46,7 +43,6 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
-            width: 100%;
         }
 
         .logo img {
@@ -61,29 +57,29 @@
 
         .conteudo-principal {
             background-color: var(--cinza-secundario);
+            padding: 3% 2%;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 300px;
-           
+            height: 353px;
         }
 
-        .qrcodeassistec{
-            margin: auto;
-            
-    }
 
         .nome-logo {
-            width: 10%;
+            max-width: 150px;
+            /* Limita o tamanho máximo */
+            width: 100%;
             margin-bottom: 2%;
         }
 
-
         .botao {
-            width: 15%;
+            max-width: 200px;
+            /* Limita tamanho máximo */
+            width: 100%;
             transition: var(--transicao-rapida);
+            cursor: pointer;
         }
 
         .botao:hover {
@@ -91,20 +87,69 @@
             filter: brightness(1.1);
         }
 
+        /* Ajuste no rodapé */
         .rodape {
             background-color: #424242;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            font-size: 0.9rem;
+            padding: 20px 10px;
+            /* reduzido para telas pequenas */
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .conteudo-rodape {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 10px;
+            /* reduzido */
         }
 
         .rodape p {
-            margin: 5px 0;
-            line-height: 1.0;
+            margin: 8px 0;
+            line-height: 1.4;
+            font-size: 0.9rem;
+            /* levemente menor para caber melhor */
+            word-break: break-word;
+            /* evita quebre fora da tela */
         }
-     
 
+        /* Responsividade geral */
+        @media (max-width: 768px) {
+            header {
+                height: auto;
+                /* Remove altura fixa */
+                padding: 5% 0;
+            }
+
+            .logo img {
+                width: 50%;
+            }
+
+            .line {
+                width: 70%;
+            }
+
+            .conteudo-principal {
+                height: auto;
+                /* Remove altura fixa */
+                padding: 5% 3%;
+            }
+        }
+
+        /* Ajustes para telas muito pequenas */
+        @media (max-width: 480px) {
+            .nome-logo {
+                max-width: 120px;
+            }
+
+            .botao {
+                max-width: 150px;
+            }
+
+            .rodape p {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -118,10 +163,6 @@
             <h2>Soluções em Informática</h2>
             <img class="line" src="Imagens/linha.png" alt="Divisor decorativo" loading="lazy">
         </div>
-        <div class="qrcodeassistec">          
-            <img src="Imagens/qrcodeassistec.png" alt="">
-        </div>
-     
     </header>
 
     <main class="conteudo-principal">
@@ -129,13 +170,17 @@
         <a href="empresa.html" aria-label="Saiba mais sobre a Assistec">
             <img class="botao" src="Imagens/botão.png" alt="Botão de ação" loading="lazy">
         </a>
-        
     </main>
-    <div class="rodape">
-        <p>Fevereiro/2025 | Assistec Soluções em Informática.</p>
-        <p>Todos os direitos reservados. | Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 -
-            Centro.
-        </p>
+
+    <!-- Rodapé reutilizável -->
+    <footer class="rodape">
+        <div class="conteudo-rodape">
+            <p>Fevereiro/2025 | Todos os direitos reservados a Assistec Soluções em Informática</p>
+            <p class="info-contato">Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro</p>
+            <p class="info-contato">Telefone: (31) 99999-9999 | Email: contato@assistec.com.br</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
