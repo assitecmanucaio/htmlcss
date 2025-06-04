@@ -48,6 +48,7 @@
             padding: 0 10px 10px;
         }
 
+
         body {
             background-color: var(--cinza-secundario);
             min-height: 100vh;
@@ -90,7 +91,7 @@
         }
 
         .quemso img {
-            width: 500px;
+            width: 200px;
             max-width: 100%;
             transition: var(--transicao-rapida);
             margin: auto;
@@ -101,23 +102,37 @@
             filter: brightness(1.1);
         }
 
-        .buton-container {
+        /* ==============================
+       SEÇÃO DE BOTÕES (ÁREA CINZA)
+       ============================== */
+        .cinza {
+            background-color: var(--cinza-secundario);
+            padding: 20px 0;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             gap: 20px;
-            padding: 10px 0;
+            flex-wrap: wrap;
         }
 
         .buton {
-            display: inline-block;
-            transition: var(--transicao-rapida);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .buton img {
-            width: 500px;
             max-width: 100%;
+            height: auto;
             transition: var(--transicao-rapida);
+        }
+
+        .botao-feed {
+            width: 180px;
+        }
+
+        .botao-voltar,
+        .botao-casa {
+            width: 50px;
         }
 
         .buton img:hover {
@@ -125,24 +140,32 @@
             filter: brightness(1.1);
         }
 
-    .rodape {
-      background-color: #424242;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
+        @media (max-width: 480px) {
 
-    .conteudo-rodape {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+            .botao-feed,
+            {
+            width: 50px;
+        }
+        }
 
-    .rodape p {
-      margin: 5px 0;
-      line-height: 1.6;
-    }
+        .rodape {
+            background-color: #424242;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .conteudo-rodape {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .rodape p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
     </style>
 </head>
 
@@ -151,9 +174,7 @@
         <h1>Nossos Parceiros</h1>
 
         <div class="linha">
-            <a href="missão,visão,valor.html">
                 <img class="linha" src="Imagens/linhabranca.png" alt="Linha decorativa" loading="lazy">
-            </a>
         </div>
 
         <div class="parclogo">
@@ -162,7 +183,7 @@
 
         <div class="quemso">
             <a href="quem somos.html">
-                <img src="Imagens/Quemsomosbuton.png" alt="Botão Quem Somos" loading="lazy">
+                <img class="quemso" src="Imagens/Quemsomosbuton.png" alt="Botão Página Inicial" loading="lazy">
             </a>
         </div>
 
@@ -174,25 +195,35 @@
         </main>
     </div>
 
+
+
+    <!-- ==============================
+       SEÇÃO DE BOTÕES (ÁREA CINZA)
+       ============================== -->
     <div class="cinza">
-        <div class="buton-container">
-            <div class="buton">
-                <a href="serviços.html">
-                    <img src="Imagens/voltarbranco.png" alt="Botão Voltar" loading="lazy">
-                </a>
-            </div>
-            <div class="buton">
-                <a href="FeedBacks.html">
-                    <img src="Imagens/Feedbuton.png" alt="Botão Feedbacks" loading="lazy">
-                </a>
-            </div>
-            <div class="buton">
-                <a href="index.html">
-                    <img src="Imagens/casabranca.png" alt="Botão Página Inicial" loading="lazy">
-                </a>
-            </div>
+        <div class="buton">
+            <a href="serviços.html">
+                <img class="botao-voltar" src="Imagens/voltarbranco.png" alt="Botão Voltar" loading="lazy">
+            </a>
+        </div>
+
+        <div class="buton">
+            <a href="FeedBacks.html">
+                <img class="botao-feed" src="Imagens/Feedbuton.png" alt="Botão Feedbacks" loading="lazy">
+            </a>
+        </div>
+
+
+        <div class="buton">
+            <a href="index.html">
+                <img class="botao-casa" src="Imagens/casabranca.png" alt="Botão Página Inicial" loading="lazy">
+            </a>
         </div>
     </div>
+
+
+
+
 
     <footer class="rodape">
         <div class="conteudo-rodape">
