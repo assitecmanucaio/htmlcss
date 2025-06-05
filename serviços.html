@@ -15,18 +15,25 @@
       --font: Verdana;
     }
 
-
-    .linha {
-      max-width: 700px;
-      padding: 1rem 0;
-      margin: auto;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
+    /* === LINHA RESPONSIVA === */
+    .linha {
+      width: 100%;
+      max-width: 700px;
+      margin: 1rem auto;
+    }
+
+    .linha img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* === FIM DA LINHA RESPONSIVA === */
 
     .servico {
       width: 114px;
@@ -46,8 +53,6 @@
       letter-spacing: 2px;
     }
 
-
-
     .main,
     .main2 {
       display: flex;
@@ -65,15 +70,12 @@
       box-shadow: 0 20px 30px -10px rgba(38, 57, 77, 0.5);
     }
 
-
     .branco {
       background: #fff;
       padding: 10px 10px 12px 25px;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-
     }
-
 
     .brancoRC {
       background: #fff;
@@ -82,7 +84,6 @@
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
     }
-
 
     .cards h2 {
       font-size: 16px;
@@ -138,8 +139,11 @@
     }
 
     @media (max-width: 480px) {
-
-      .botao-servicos, {
+      .botao-servicos {
+        width: 180px;
+      }
+      .botao-voltar,
+      .botao-casa {
         width: 50px;
       }
     }
@@ -163,15 +167,23 @@
       margin: 5px 0;
       line-height: 1.6;
     }
+
+    /* ==============================
+       MEDIA QUERY: SMARTPHONES (≤ 480px)
+       ============================== */
+    @media (max-width: 480px) {
+      .cards {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <div class="linha">
-    <a href="missão,visão,valor.html">
-      <img class="linha" src="Imagens/linha.png" alt="Botão de ação" loading="lazy">
-    </a>
+    <img src="Imagens/linha.png" alt="Botão de ação" loading="lazy">
   </div>
 
   <h1>SERVIÇOS PRESTADOS</h1>
@@ -224,7 +236,6 @@
     </div>
   </div>
 
-
   <!-- ==============================
        SEÇÃO DE BOTÕES (ÁREA CINZA)
        ============================== -->
@@ -240,7 +251,6 @@
         <img class="botao-servicos" src="Imagens/parceriabuton.png" alt="Serviços" loading="lazy" />
       </a>
     </div>
-
 
     <div class="buton">
       <a href="index.html">
