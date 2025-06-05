@@ -113,26 +113,43 @@
 
         .cinza {
             background-color: var(--cinza-secundario);
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .buton {
-            display: inline-block;
+            display: flex;
             align-items: center;
-            margin-left: 15%;
-            margin-right: -1%;
             justify-content: center;
-
         }
 
         .buton img {
-            width: 450px;
-            transition: 0.3s ease;
+            max-width: 100%;
+            height: auto;
+            transition: var(--transicao-rapida);
+        }
+
+        .botao-voltar,
+        .botao-casa {
+            width: 50px;
         }
 
         .buton img:hover {
             transform: scale(1.05);
             filter: brightness(1.1);
         }
+
+        @media (max-width: 480px) {
+
+            .botao-feed,
+            {
+            width: 50px;
+        }
+        }
+
 
 
 
@@ -225,25 +242,33 @@
         </div>
     </div>
 
+
+    <!-- ==============================
+       SEÇÃO DE BOTÕES (ÁREA CINZA)
+       ============================== -->
     <div class="cinza">
         <div class="buton">
-            <a href="FeedBacks.html"></href> <img src="Imagens/voltarbranco.png" alt="Botão de ação" loading="lazy"></a>
-        </div>
-
-        <div class="buton">
-            <a href="index.html">
-                <img class="botao" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
+            <a href="FeedBacks.html"></href>
+                <img class="botao-voltar" src="Imagens/voltarbranco.png" alt="Botão de ação" loading="lazy">
             </a>
         </div>
 
-  <footer class="rodape">
-    <div class="conteudo-rodape">
-      <p>Fevereiro/2025 | Todos os direitos reservados a Assistec Soluções em Informática.</p>
-      <p class="info-contato">Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro</p>
-      <p class="info-contato">Telefone: (31) 99999-9999 | Email: contato@assistec.com.br</p>
+
+        <div class="buton">
+            <a href="index.html">
+                <img class="botao-casa" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
+            </a>
+        </div>
     </div>
-  </footer>
-  
+
+    <footer class="rodape">
+        <div class="conteudo-rodape">
+            <p>Fevereiro/2025 | Todos os direitos reservados a Assistec Soluções em Informática.</p>
+            <p class="info-contato">Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro</p>
+            <p class="info-contato">Telefone: (31) 99999-9999 | Email: contato@assistec.com.br</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>

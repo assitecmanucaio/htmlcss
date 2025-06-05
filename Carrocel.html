@@ -65,20 +65,32 @@
 
         .cinza {
             background-color: var(--cinza-secundario);
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-
         .buton {
-            display: inline-block;
+            display: flex;
             align-items: center;
-            margin-left: 10%;
-            margin-right: -10%;
             justify-content: center;
         }
 
         .buton img {
-            width: 500px;
-            transition: 0.3s ease;
+            max-width: 100%;
+            height: auto;
+            transition: var(--transicao-rapida);
+        }
+
+        .botao-forms {
+            width: 180px;
+        }
+
+        .botao-voltar,
+        .botao-casa {
+            width: 50px;
         }
 
         .buton img:hover {
@@ -86,28 +98,36 @@
             filter: brightness(1.1);
         }
 
+        @media (max-width: 480px) {
+
+            .botao-feed,
+            {
+            width: 50px;
+        }
+        }
+
 
 
         /* RODAPÉ REUTILIZÁVEL */
-    .rodape {
-      background-color: #424242;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      width: 100%;
-    }
+        .rodape {
+            background-color: #424242;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 100%;
+        }
 
-    .conteudo-rodape {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+        .conteudo-rodape {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    .rodape p {
-      margin: 5px 0;
-      line-height: 1.6;
-    }
+        .rodape p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
     </style>
 
     <div id="Cabecalho">
@@ -171,30 +191,42 @@
             <img src="Imagens/ServiçosIMG/img/IMGcarrocel45.jpeg" alt="">
         </div>
 
+
+
+
+
+        <!-- ==============================
+       SEÇÃO DE BOTÕES (ÁREA CINZA)
+       ============================== -->
         <div class="cinza">
             <div class="buton">
-                <a href="FeedBacks.html"></href> <img src="Imagens/voltarbranco.png" alt="Botão de ação"
-                        loading="lazy"></a>
+                <a href="FeedBacks.html"></href>
+                    <img class="botao-voltar" src="Imagens/voltarbranco.png" alt="Botão de ação" loading="lazy">
+                </a>
             </div>
 
             <div class="buton">
-                <a href="Formulario.html"></href> <img src="Imagens/butonforms.png" alt="Botão de ação"
-                        loading="lazy"></a>
+                <a href="Formulario.html"></href>
+                    <img class="botao-forms" src="Imagens/butonforms.png" alt="Botão de ação" loading="lazy">
+                </a>
             </div>
+
+
             <div class="buton">
                 <a href="index.html">
-                    <img class="botao" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
+                    <img class="botao-casa" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
                 </a>
             </div>
         </div>
 
-  <footer class="rodape">
-    <div class="conteudo-rodape">
-      <p>Fevereiro/2025 | Todos os direitos reservados a Assistec Soluções em Informática.</p>
-      <p class="info-contato">Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro</p>
-      <p class="info-contato">Telefone: (31) 99999-9999 | Email: contato@assistec.com.br</p>
-    </div>
-  </footer>
+        <footer class="rodape">
+            <div class="conteudo-rodape">
+                <p>Fevereiro/2025 | Todos os direitos reservados a Assistec Soluções em Informática.</p>
+                <p class="info-contato">Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro
+                </p>
+                <p class="info-contato">Telefone: (31) 99999-9999 | Email: contato@assistec.com.br</p>
+            </div>
+        </footer>
 
     </body>
 
