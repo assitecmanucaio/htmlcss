@@ -2,232 +2,286 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momentos no Curso Técnico</title>
+  <style>
+    :root {
+      --azul-primario: #6ca9e6;
+      --cinza-secundario: #4a4a4a;
+      --branco: #ffffff;
+      --cor-texto: rgb(255, 255, 255);
+      --transicao-rapida: all 0.3s ease;
+      --font: Verdana, sans-serif;
+    }
+
+    /* reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--cinza-secundario);
+      font-family: var(--font);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* título centralizado */
+    h1 {
+      font-size: 2.5rem;
+      color: var(--branco);
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    /* cabeçalho com logo */
+    #Cabecalho {
+      background: var(--branco);
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+
+    #Cabecalho img {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* área de fotos com scroll horizontal */
+    .fotos {
+      width: 100%;
+      max-width: 1200px;
+      margin: 2rem auto;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .fotos img {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      width: 85%;
+      max-width: 600px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    /* botões na área cinza */
+    .cinza {
+      background-color: var(--cinza-secundario);
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .buton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .buton img {
+      max-width: 100%;
+      height: auto;
+      transition: var(--transicao-rapida);
+    }
+
+    .botao-forms {
+      width: 180px;
+    }
+
+    .botao-voltar,
+    .botao-casa {
+      width: 50px;
+    }
+
+    .buton img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    /* rodapé */
+    .rodape {
+      background-color: #424242;
+      color: var(--branco);
+      text-align: center;
+      padding: 1.5rem 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-top: auto;
+    }
+
+    .conteudo-rodape {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .rodape p {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+
+    /* mídia intermediária (telas até 1000px) */
+    @media (max-width: 1000px) {
+      .fotos img {
+        height: 300px;
+      }
+    }
+
+    /* tablets e telas médias (até 768px) */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+        padding: 1rem;
+      }
+
+      .fotos {
+        gap: 0.75rem;
+      }
+
+      .fotos img {
+        width: 90%;
+        max-width: 500px;
+        height: 280px;
+      }
+
+      .botao-forms {
+        width: 140px;
+      }
+
+      .botao-voltar,
+      .botao-casa {
+        width: 40px;
+      }
+    }
+
+    /* smartphones (até 480px) */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.75rem;
+        margin: 1rem 0;
+      }
+
+      #Cabecalho img {
+        max-width: 450px;
+      }
+
+      .fotos {
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+      }
+
+      .fotos img {
+        width: 95%;
+        max-width: 350px;
+        height: 220px;
+      }
+
+      .botao-forms {
+        width: 180px;
+      }
+
+      .botao-voltar,
+      .botao-casa {
+        width: 50px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <style>
-        /*animação*/
-        :root {
-            --azul-primario: #6ca9e6;
-            --cinza-secundario: #4a4a4a;
-            --branco: #ffffff;
-            --cor-texto: rgb(255, 255, 255);
-            --transicao-rapida: all 0.3s ease;
-            --font: Verdana;
-        }
+  <div id="Cabecalho">
+    <img src="Imagens/AssistecBanLog.png" alt="Logo Assistec" loading="lazy">
+  </div>
 
+  <h1>Nossos momentos no Curso Técnico em Informática</h1>
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #4a4a4a;
-        }
+  <div class="fotos">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel1.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel2.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel3.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel4.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel5.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel6.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel7.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel8.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel9.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel10.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel11.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel12.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel13.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel14.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel15.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel16.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel17.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel18.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel19.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel20.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel21.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel22.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel23.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel24.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel25.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel26.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel27.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel28.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel29.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel30.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel31.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel32.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel33.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel34.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel35.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel36.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel37.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel38.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel39.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel40.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel41.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel42.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel43.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel44.jpeg" alt="">
+    <img src="Imagens/ServiçosIMG/img/IMGcarrocel45.jpeg" alt="">
+  </div>
 
-        h1 {
-            font-family: var(--font);
-            font-size: 2.5rem;
-            color: var(--branco);
-            text-align: center;
-            padding: 25px 0;
-        }
-
-        /*IMAGEM cabeçalho pag*/
-        #Cabecalho {
-            text-align: center;
-            padding: 5px 0;
-            background: var(--branco);
-        }
-
-        .fotos {
-            width: 100%;
-            max-width: 1200px;
-            margin: 2rem auto;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            display: flex;
-            gap: 1rem;
-            padding: 1rem 0;
-        }
-
-        .fotos img {
-            scroll-snap-align: start;
-            flex: 0 0 auto;
-            width: 85%;
-            max-width: 600px;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 8px;
-
-        }
-
-        .cinza {
-            background-color: var(--cinza-secundario);
-            padding: 20px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .buton {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .buton img {
-            max-width: 100%;
-            height: auto;
-            transition: var(--transicao-rapida);
-        }
-
-        .botao-forms {
-            width: 180px;
-        }
-
-        .botao-voltar,
-        .botao-casa {
-            width: 50px;
-        }
-
-        .buton img:hover {
-            transform: scale(1.05);
-            filter: brightness(1.1);
-        }
-
-        @media (max-width: 480px) {
-
-            .botao-feed,
-            {
-            width: 50px;
-        }
-        }
-
-
-
-        /* RODAPÉ REUTILIZÁVEL */
-        .rodape {
-            background-color: #424242;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            width: 100%;
-        }
-
-        .conteudo-rodape {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .rodape p {
-            margin: 5px 0;
-            line-height: 1.6;
-        }
-    </style>
-
-    <div id="Cabecalho">
-        <img src="Imagens/AssistecBanLog.png" alt="">
+  <div class="cinza">
+    <div class="buton">
+      <a href="FeedBacks.html">
+        <img class="botao-voltar" src="Imagens/voltarbranco.png" alt="Voltar" loading="lazy">
+      </a>
     </div>
 
-    <h1>Nossos momentos no Curso Técnico em Informática</h1>
+    <div class="buton">
+      <a href="Formulario.html">
+        <img class="botao-forms" src="Imagens/butonforms.png" alt="Formulário" loading="lazy">
+      </a>
+    </div>
 
-    <body>
-        <div class="fotos">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel1.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel2.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel3.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel4.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel5.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel6.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel7.jpeg" alt="">
+    <div class="buton">
+      <a href="index.html">
+        <img class="botao-casa" src="Imagens/casabranca.png" alt="Página Inicial" loading="lazy">
+      </a>
+    </div>
+  </div>
 
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel8.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel9.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel10.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel11.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel12.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel13.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel14.jpeg" alt="">
-
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel15.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel16.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel17.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel18.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel19.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel20.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel21.jpeg" alt="">
-
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel22.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel23.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel24.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel25.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel26.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel27.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel28.jpeg" alt="">
-
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel29.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel30.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel31.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel32.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel33.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel34.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel35.jpeg" alt="">
-
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel36.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel37.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel38.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel39.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel40.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel41.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel42.jpeg" alt="">
-
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel43.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel44.jpeg" alt="">
-            <img src="Imagens/ServiçosIMG/img/IMGcarrocel45.jpeg" alt="">
-        </div>
-
-
-
-
-
-        <!-- ==============================
-       SEÇÃO DE BOTÕES (ÁREA CINZA)
-       ============================== -->
-        <div class="cinza">
-            <div class="buton">
-                <a href="FeedBacks.html"></href>
-                    <img class="botao-voltar" src="Imagens/voltarbranco.png" alt="Botão de ação" loading="lazy">
-                </a>
-            </div>
-
-            <div class="buton">
-                <a href="Formulario.html"></href>
-                    <img class="botao-forms" src="Imagens/butonforms.png" alt="Botão de ação" loading="lazy">
-                </a>
-            </div>
-
-
-            <div class="buton">
-                <a href="index.html">
-                    <img class="botao-casa" src="Imagens/casabranca.png" alt="Botão de ação" loading="lazy">
-                </a>
-            </div>
-        </div>
-
-        <footer class="rodape">
-            <div class="conteudo-rodape">
-                <p>Fevereiro/2025 | Todos os direitos reservados a Assistec Soluções em Informática.</p>
-                <p class="info-contato">Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro
-                </p>
-                <p class="info-contato">Telefone: (31) 99999-9999 | Email: contato@assistec.com.br</p>
-            </div>
-        </footer>
-
-    </body>
+  <footer class="rodape">
+    <div class="conteudo-rodape">
+      <p>Fevereiro/2025 | Todos os direitos reservados a Assistec Soluções em Informática.</p>
+      <p class="info-contato">Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro</p>
+      <p class="info-contato">Telefone: (31) 99999-9999 | Email: contato@assistec.com.br</p>
+    </div>
+  </footer>
+</body>
 
 </html>

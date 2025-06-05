@@ -6,27 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedbacks de Clientes</title>
     <style>
-        /*animação*/
         :root {
             --azul-primario: #6ca9e6;
             --cinza-secundario: #4a4a4a;
             --branco: #ffffff;
             --cor-texto: rgb(255, 255, 255);
             --transicao-rapida: all 0.3s ease;
-            --font: Verdana;
+            --font: Verdana, sans-serif;
         }
 
+        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-
         html,
         body {
             height: 100%;
-            background-color: #4a4a4a;
+            background-color: var(--cinza-secundario);
             font-family: var(--font);
             display: flex;
             flex-direction: column;
@@ -36,74 +35,93 @@
             flex: 1;
         }
 
-        .linha {
-            max-width: 600px;
-            padding: 1rem 0;
-            margin: auto;
-        }
-
+        /* === TÍTULO CENTRALIZADO === */
         h1 {
             display: flex;
             justify-content: center;
-            margin: 5rem 0 1rem 0;
-            font-family: var(--font);
-            font-size: 40px;
+            margin: 4rem 0 1rem;
+            font-size: 2.5rem;
             color: var(--branco);
+            text-align: center;
         }
 
-        .card .user {
-            width: 100px;
+        /* === LINHA RESPONSIVA === */
+        .linha {
+            width: 90%;
+            max-width: 600px;
+            margin: 1rem auto;
+            padding: 0;
         }
 
-        .star {
-            width: 30px;
+        .linha img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
+        /* === FIM DA LINHA RESPONSIVA === */
 
+        /* === GRID DE CARDS === */
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             max-width: 980px;
             margin: 0 auto;
-            grid-gap: 40px;
-            padding: 0 20px 40px;
+            gap: 2rem;
+            padding: 0 1rem 2rem;
         }
 
         .card {
-            background-color: white;
+            background-color: var(--branco);
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 35px 40px;
-            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+                        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            border-radius: 1rem;
         }
 
         .card .user {
-            width: 180px;
-            height: 100px;
-            border-radius: 50px;
-            margin-bottom: 15px;
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 1rem;
         }
 
         .card h3 {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            margin-top: 20px;
-            text-align: center;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 18px;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
             color: #333;
         }
 
+        .stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            width: 25px;
+            height: auto;
+        }
+
+        .card p {
+            margin-top: 1rem;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        /* === BOTÕES NA ÁREA CINZA === */
         .cinza {
             background-color: var(--cinza-secundario);
-            padding: 20px 0;
+            padding: 1.5rem 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
@@ -133,60 +151,51 @@
             filter: brightness(1.1);
         }
 
-        @media (max-width: 480px) {
+
+        @media (max-width: 480px) 
 
             .botao-feed,
             {
             width: 50px;
         }
-        }
 
 
-
-        /* Responsividade */
-        @media (max-width: 1000px) {
-            .cards {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
+        /* === MEDIA QUERY: ≤ 700px = 1 coluna de cards e botões empilhados === */
         @media (max-width: 700px) {
             .cards {
                 grid-template-columns: 1fr;
-            }
-
-            .buton-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .buton img {
-                width: 400px;
+                gap: 1.5rem;
             }
         }
 
+
+        /* === MEDIA QUERY: ≤ 480px = ajustes de títulos, padding, imagens menores === */
         @media (max-width: 480px) {
             h1 {
-                font-size: 32px;
-                margin: 3rem 0 1rem;
+                font-size: 1.9rem;
+                margin: 2rem 0 1rem;
+            }
+
+            .linha {
+                width: 100%;
+                margin: 0.75rem auto;
             }
 
             .card {
-                padding: 25px 20px;
+                padding: 1.5rem 1rem;
             }
 
-            .buton img {
-                width: 300px;
+            .card .user {
+                max-width: 120px;
             }
         }
 
-
-        /* RODAPÉ CORRIGIDO */
+        /* === RODAPÉ === */
         .rodape {
             background-color: #424242;
-            color: white;
+            color: var(--branco);
             text-align: center;
-            padding: 20px 0;
+            padding: 1.5rem 0;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             width: 100%;
         }
@@ -194,11 +203,11 @@
         .conteudo-rodape {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1rem;
         }
 
         .rodape p {
-            margin: 5px 0;
+            margin: 0.5rem 0;
             line-height: 1.6;
         }
     </style>
@@ -206,11 +215,11 @@
 
 <body>
     <div class="conteudo">
-        <h1>O FeedBacks de nossos clientes</h1>
+        <h1>Feedbacks de Nossos Clientes</h1>
 
         <div class="linha">
             <a href="missão,visão,valor.html">
-                <img class="linha" src="Imagens/linhabranca.png" alt="Botão de ação" loading="lazy">
+                <img src="Imagens/linhabranca.png" alt="Linha decorativa" loading="lazy">
             </a>
         </div>
 
@@ -245,8 +254,8 @@
             </div>
 
             <div class="card">
-                <img class="user" src="Imagens/perfil2.png" alt="Artur Michael Souza">
-                <h3>Artur Michael Souza</h3>
+                <img class="user" src="Imagens/perfil2.png" alt="Artur Souza">
+                <h3>Artur Souza</h3>
                 <div class="stars">
                     <img class="star" src="Imagens/starfeed.png" alt="Estrela">
                     <img class="star" src="Imagens/starfeed.png" alt="Estrela">
@@ -260,9 +269,6 @@
             </div>
         </section>
     </div>
-
-
-
 
     <!-- ==============================
        SEÇÃO DE BOTÕES (ÁREA CINZA)
@@ -280,13 +286,15 @@
             </a>
         </div>
 
-
         <div class="buton">
             <a href="index.html">
                 <img class="botao-casa" src="Imagens/casabranca.png" alt="Botão Página Inicial" loading="lazy">
             </a>
         </div>
     </div>
+
+    
+    
 
     <footer class="rodape">
         <div class="conteudo-rodape">
@@ -295,7 +303,6 @@
             <p class="info-contato">Telefone: (31) 99999-9999 | Email: contato@assistec.com.br</p>
         </div>
     </footer>
-
 </body>
 
 </html>
