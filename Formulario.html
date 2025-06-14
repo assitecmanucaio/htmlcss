@@ -10,7 +10,6 @@
             --azul-primario: #6ca9e6;
             --cinza-secundario: #4a4a4a;
             --branco: #ffffff;
-            --cor-texto: rgb(255, 255, 255);
             --transicao-rapida: all 0.3s ease;
             --font: Verdana;
         }
@@ -51,10 +50,7 @@
             max-width: 120%;
             height: auto;
             border-radius: 8px;
-
         }
-
-
 
         .formulario-container {
             flex: 1;
@@ -143,16 +139,10 @@
         }
 
         @media (max-width: 480px) {
-
-            .botao-feed,
-            {
-            width: 50px;
+            .botao-feed {
+                width: 50px;
+            }
         }
-        }
-
-
-
-
 
         .intro {
             text-align: center;
@@ -205,6 +195,22 @@
             margin: 5px 0;
             line-height: 1.6;
         }
+
+        /* Pop‑in de confirmação centralizado */
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--branco);
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: none;
+            color: var(--azul-primario);
+            font-weight: bold;
+            z-index: 1000;
+        }
     </style>
 </head>
 
@@ -212,8 +218,7 @@
     <div class="container">
         <div class="intro">
             <h2>Fale Conosco</h2>
-            <p>Entre em contato conosco preenchendo o formulário. Nossa equipe está pronta para responder suas dúvidas e
-                ouvir suas sugestões.</p>
+            <p>Entre em contato conosco preenchendo o formulário. Nossa equipe está pronta para responder suas dúvidas e ouvir suas sugestões.</p>
         </div>
 
         <div class="contato-container">
@@ -222,7 +227,7 @@
             </div>
 
             <div class="formulario-container">
-                <form action="">
+                <form>
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" name="nomecompleto" placeholder="Seu nome completo...">
 
@@ -233,8 +238,7 @@
                     <input type="text" id="telefone" name="telefone" placeholder="(DDD) 9 9999-9999...">
 
                     <label for="mensagem">Mensagem</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="6"
-                        placeholder="Digite sua mensagem..."></textarea>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="6" placeholder="Digite sua mensagem..."></textarea>
 
                     <input type="submit" value="Enviar Mensagem">
                 </form>
@@ -242,17 +246,15 @@
         </div>
     </div>
 
-
     <!-- ==============================
        SEÇÃO DE BOTÕES (ÁREA CINZA)
        ============================== -->
     <div class="cinza">
         <div class="buton">
-            <a href="FeedBacks.html"></href>
+            <a href="FeedBacks.html">
                 <img class="botao-voltar" src="Imagens/voltarbranco.png" alt="Botão de ação" loading="lazy">
             </a>
         </div>
-
 
         <div class="buton">
             <a href="index.html">
@@ -269,6 +271,21 @@
         </div>
     </footer>
 
+    <div id="modalConfirm" class="modal">Mensagem enviada!</div>
+
+    <script>
+        const form = document.querySelector('form');
+        const modal = document.getElementById('modalConfirm');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 1000);
+            form.reset();
+        });
+    </script>
 </body>
 
 </html>
